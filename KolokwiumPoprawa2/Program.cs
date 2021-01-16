@@ -38,26 +38,19 @@ namespace KolokwiumPoprawa2
 
             for (int i = 0; i < 5; i++)
             {
-                for (int j = 0; j < 1; j++)
-                {
-                    tab[i, j] = tab2[rnd.Next(3)];
-                }
-                for (int k = 1; k < 2; k++)
-                {
-                    tab[i, k] = rnd.Next(1, 101);
-                }
-                for (int l = 2; l < 3; l++)
-                {
-                    tab[i, l] = rnd.Next(2, 6);
-                }
-                for (int m = 3; m < 4; m++)
-                {
-                    tab[i, m] = rnd.Next(6, 8);
-                }
+                
+                    tab[i, 0] = tab2[rnd.Next(3)];
+                
+                    tab[i, 1] = rnd.Next(1, 101);
+                
+                    tab[i, 2] = rnd.Next(2, 6);
+                
+                    tab[i, 3] = rnd.Next(6, 8);
+                
             }
 
             int min = tab[0, 0];
-            int akt = 0;
+            int akt;
             for (int n = 0; n < tab.GetLength(0); n++)
             {
                 akt = tab[n, 0];
@@ -75,7 +68,7 @@ namespace KolokwiumPoprawa2
                 x += tab[o, 1];
 
             }
-            Console.WriteLine("Suma opoznien:" + a);
+            Console.WriteLine("Suma opoznien:" + x);
             int b = 0;
             for (int i = 0; i < tab.GetLength(0); i++)
             {

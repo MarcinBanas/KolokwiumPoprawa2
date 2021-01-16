@@ -25,7 +25,7 @@ namespace KolokwiumPoprawa2
 
         public void Sprzedaj()
         {
-            if(OTC)
+            if(OTC==false)
             {
                 Console.WriteLine("Podaj Numer recepty");
                 string a = Console.ReadLine();
@@ -37,6 +37,10 @@ namespace KolokwiumPoprawa2
                 {
                     throw new ArgumentException("Zly nr recepty");
                 }
+            }
+            else
+            {
+                Console.WriteLine(Nazwa + " " + Cena());
             }
         }
     }
